@@ -1,0 +1,72 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<center><title>Book Issue</title></center>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="text-center">
+	<nav class="navbar navbar-default navbar-fixed-top opaque-navbar">
+      <div class="container">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="https://geekhaven.iiita.ac.in/" style="cursor: pointer; color: #e44c65; font-size: 30px;" target="_blank">
+          LOGO
+        </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="includes/borrowed.php" style="color: #ffaaaa;">Books-Borrowed</a></li>
+	      <li><a href="profile.php" style="color: #ffaaaa;"><?php echo $_SESSION['username']; ?></a></li>
+	      <li><a href="includes/logout.php" style="color: #ffaaaa;">Logout</a></li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+    <div style="height: 50px;"></div>
+
+	<div>
+		<h4>Receipt</h4>
+		<a href="javascript:window.print()">Click to print</a>
+		<div style="height: 50px;"></div>
+		<center>
+		<table class="table table-striped table-bordered text-center" style="width: 50%;">
+			<tr>
+				<th>Name Of Student</th>
+				<td><?php echo $_SESSION['name']; ?></td>
+			</tr>
+			<tr>
+				<th>Book Issued</th>
+				<td><?php echo $name; ?></td>
+			</tr>
+			<tr>
+				<th>Serial ID of book</th>
+				<td><?php echo $serial_id; ?></td>
+			</tr>
+			<tr>
+				<th>From</th>
+				<td><?php echo $from_date; ?></td>
+			</tr>
+			<tr>
+				<th>To</th>
+				<td><?php echo $to_date; ?></td>
+			</tr>
+			
+		</table>
+		</center>
+	</div>    
+
+</body>
+</html>
